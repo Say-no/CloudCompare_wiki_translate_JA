@@ -1,13 +1,13 @@
-# History
+# 歴史
 
-CloudCompare is a 3D point cloud (and triangular mesh) editing and processing software.
+CloudCompare は 3D ポイントクラウド (および三角形メッシュ) を編集し、処理するためのソフトウェアです。
 
-Originally, it has been designed to perform direct comparison between dense 3D point clouds. It relies on a specific [[Octree | octree]] structure that enables great performances<sup>1</sup> when performing this kind of task. Moreover, as most point clouds were acquired by terrestrial [http://en.wikipedia.org/wiki/Laser_scanning laser scanners], CloudCompare was meant to deal with huge point clouds on a standard laptop - typically more than 10 million points (in 2005!). Soon after, comparison between a point cloud and a triangular mesh has been supported (see below). Afterwards, many other point cloud processing algorithms have followed (registration, resampling, color/normal vectors/scalar fields management, statistics computation, sensor management, interactive or automatic segmentation, etc.) as well as display enhancement tools (custom color ramps, color & normal vectors handling, calibrated pictures handling, OpenGL shaders, plugins, etc.).
+もともとは、高密度の3次元ポイントクラウド同士の直接比較に性能が出るようデザインされました。それは明らかに、この種のタスクを実行する時に非常に効果的な[八分木構造](http://www.cloudcompare.org/doc/wiki/index.php?title=Octree)に依拠している [^1] 。それに加えて、[地上式のレーザースキャナー](http://en.wikipedia.org/wiki/Laser_scanning)から得られるなどした、巨大なポイントクラウド(典型的には2005年(!)の時点で1,000万ポイント以上)を CloudCompareはスタンダードなノートパソコンで扱えることを意味します。 Soon after, comparison between a point cloud and a triangular mesh has been supported (see below). Afterwards, many other point cloud processing algorithms have followed (registration, resampling, color/normal vectors/scalar fields management, statistics computation, sensor management, interactive or automatic segmentation, etc.) as well as display enhancement tools (custom color ramps, color & normal vectors handling, calibrated pictures handling, OpenGL shaders, plugins, etc.).
 
 {| border="0" cellspacing="0" cellpadding="5" align="center"
 ! [[Image:Comp_cloud_mesh.jpg|center]]
 |-
-| (1) ''for instance it took about 10 s. to compute the distances of 3 million points to a 14.000 triangles mesh on a laptop with dual-core processor''
+[^1]: たとえば、デュアルコアプロセッサーのノートパソコンで300万ポイントの距離を14,000の三角形メッシュと計算するのに10秒しかからない。
 |}
 
 # Philosophy
