@@ -2,17 +2,16 @@
 
 CloudCompare は 3D ポイントクラウド (および三角形メッシュ) を編集し、処理するためのソフトウェアです。
 
-もともとは、高密度の3次元ポイントクラウド同士の直接比較に性能が出るようデザインされました。それは明らかに、この種のタスクを実行する時に非常に効果的な[八分木構造](http://www.cloudcompare.org/doc/wiki/index.php?title=Octree)に依拠している [^1] 。それに加えて、[地上式のレーザースキャナー](http://en.wikipedia.org/wiki/Laser_scanning)から得られるなどした、巨大なポイントクラウド(典型的には2005年(!)の時点で1,000万ポイント以上)を CloudCompareはスタンダードなノートパソコンで扱えることを意味します。 Soon after, comparison between a point cloud and a triangular mesh has been supported (see below). Afterwards, many other point cloud processing algorithms have followed (registration, resampling, color/normal vectors/scalar fields management, statistics computation, sensor management, interactive or automatic segmentation, etc.) as well as display enhancement tools (custom color ramps, color & normal vectors handling, calibrated pictures handling, OpenGL shaders, plugins, etc.).
+もともとは、高密度の3次元ポイントクラウド同士の直接比較に性能が出るようデザインされました。それは明らかに、この種のタスクを実行する時に非常に効果的な[octree](http://www.cloudcompare.org/doc/wiki/index.php?title=Octree)に依拠しています [^1]。それに加えて、CloudCompareは地上式の[レーザースキャナー](http://en.wikipedia.org/wiki/Laser_scanning)から得られるなどした、巨大なポイントクラウド (典型的には2005年(!)の時点で1,000万ポイント以上) を スタンダードなノートパソコンで扱えることを意味します。まもなく、ポイントクラウドと三角形メッシュの比較機能がサポートされるようになります (以下、参照)。その後は、他の多くのポイントクラウド処理のアルゴリズム (registration、リサンプリング、color/normal vectors/scalar fields management、統計的計算、センサーマネジメント、interactive or automatic segmentation等々) がディスプレイ拡張ツール (カスタムカラーランプ、color & normal vectors handling、calibrated pictures handling、OpenGL shaders、プラグイン等々) と同様に使えるようになるでしょう。
 
-{| border="0" cellspacing="0" cellpadding="5" align="center"
-! [[Image:Comp_cloud_mesh.jpg|center]]
-|-
+![http://www.cloudcompare.org/doc/wiki/images/9/98/Comp_cloud_mesh.jpg](http://www.cloudcompare.org/doc/wiki/images/9/98/Comp_cloud_mesh.jpg) 
+
+
 [^1]: たとえば、デュアルコアプロセッサーのノートパソコンで300万ポイントの距離を14,000の三角形メッシュと計算するのに10秒しかからない。
-|}
 
-# Philosophy
+# 哲学
 
-## Point cloud Vs Mesh
+## ポイントクラウド対メッシュ
 
 Regarding its particular history, CloudCompare considers almost all 3D entities as [[Entities | point clouds]]. Typically, a triangular mesh is only a point cloud (the mesh vertices) with an associated topology (triplets of 'connected' points corresponding to each triangle). This explains that meshes have always either a point cloud named 'vertices' as sibling or parent  (depending on the way they have been loaded or generated). And while CloudCompare will let the user apply some tools directly on a mesh structure (i.e. triangles), some tools can only be applied to the mesh vertices. It may be a bit disturbing at first, but we don't want the user to ignore this: '''CloudCompare is mainly a point cloud processing software'''.
 
