@@ -18,6 +18,11 @@ http://www.cloudcompare.org/doc/wiki/index.php?title=Main_Page
 
 の3つのページが存在しています。
 
+# 翻訳方針
+専門用語はこなれた日本語訳がなく、下手に訳すとむしろ意味がわからなくなる場合も多々あります。
+
+そのため、独断で英単語のままにしている専門用語もあります。必要に応じて各自で訳して下さい。
+
 # License
 元の文書のライセンスはGNU Free Documentation License Version 1.2となっております。
 
